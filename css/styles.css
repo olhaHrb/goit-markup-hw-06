@@ -30,14 +30,35 @@ ul {
     }
 
 
+.hide {
+    display: none;
+}
+
 /* Common styles */
 
 .container {
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
+
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 h1, h2, h3, p, ul {
@@ -62,6 +83,8 @@ h2 {
     letter-spacing: 0.02em;
     text-transform: capitalize;
 }
+
+
 
 h3 {
     color: #2E2F42;
@@ -232,8 +255,15 @@ img {
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .visually-hidden {
@@ -302,7 +332,23 @@ img {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+
+    /*max-width: 264px;
+    margin-left: auto;
+    margin-right: auto;*/
+
+    /*display: flex;
+    gap: 24px;*/
+}
+
+@media screen and (min-width: 768px) {
+    .team-list {
+        gap: 64px 24px;
+        /*width: 100%;*/
+        /*width: calc((100% - 24px) / 2);*/
+    }
 }
 
 .team-title {
@@ -313,11 +359,24 @@ img {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    width: 1158px;
+    max-width: 288px;
     margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
 }
+
+@media screen and (min-width: 768px) {
+    .team-title {
+        max-width: 736px;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .team-title {
+        max-width: 1128px;
+    }
+}
+
 
 .team-item {
     background-color: #FFFFFF;
@@ -325,6 +384,21 @@ img {
     text-align: center;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+@media screen and (min-width: 768px) {
+    .team-item {
+       width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .team-item {
+        width: calc((100% - 24px * 3) / 4);
+    }
+}
+
+
+
 
 .team-card {
     padding-top: 32px;
