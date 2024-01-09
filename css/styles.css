@@ -240,31 +240,64 @@ img {
 }
 
 .hero-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
     background-color: #2E2F42;
-    padding-top: 188px;
-    padding-bottom: 188px;
-    max-width: 1440px;
     background-image:
-    linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), 
-    url(../images/Hero/people-office.jpg);
+            linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
+            url(../images/Hero/people-office.jpg);
     
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+    .hero-section {
+        padding-top: 112;
+        padding-bottom: 112;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
+}
+
 .hero-title {
     color: #FFFFFF;
     text-align: center;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: 1.12px;
-    max-width: 496px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    max-width: 288px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
+    
+@media screen and (min-width: 768px) {
+    .hero-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-title {
+        margin-bottom: 48px;
+    }
+
+}
+    
+
 
 .hero-button {
     display: block;
